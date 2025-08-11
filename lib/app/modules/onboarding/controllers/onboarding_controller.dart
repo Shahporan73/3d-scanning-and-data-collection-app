@@ -1,23 +1,10 @@
 import 'package:get/get.dart';
 
 class OnboardingController extends GetxController {
-  //TODO: Implement OnboardingController
-
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  var isLoading = false.obs;
+  Future<void> goNext() async {
+    await Future.delayed(const Duration(seconds: 2, milliseconds: 500));
+    // Navigate to next screen
+    Get.offAllNamed('/home');
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }

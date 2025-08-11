@@ -3,10 +3,10 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   Routes._();
+  static const ONBOARDING = _Paths.ONBOARDING;
   static const HOME = _Paths.HOME;
   static const AUTHENTICATION = _Paths.AUTHENTICATION;
   static const PROFILE = _Paths.PROFILE;
-  static const ONBOARDING = _Paths.ONBOARDING;
   static const HOW_TO_USE_SCAN = _Paths.HOW_TO_USE_SCAN;
   static const CAMERA = _Paths.CAMERA;
   static const MY_SCAN_DETAILS = _Paths.MY_SCAN_DETAILS;
@@ -17,10 +17,10 @@ abstract class Routes {
 
 abstract class _Paths {
   _Paths._();
+  static const ONBOARDING = '/onboarding';
   static const HOME = '/home';
   static const AUTHENTICATION = '/authentication';
   static const PROFILE = '/profile';
-  static const ONBOARDING = '/onboarding';
   static const HOW_TO_USE_SCAN = '/how-to-use-scan';
   static const CAMERA = '/camera';
   static const MY_SCAN_DETAILS = '/my-scan-details';

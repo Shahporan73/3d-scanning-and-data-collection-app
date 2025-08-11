@@ -1,7 +1,7 @@
 class AppImages {
-  static String splashLogo = "assets/images/splash_logo.png";
-  static String authAppLogo = "assets/images/auth_app_logo.png";
-  static String arriveTaxiImage = "assets/images/arrive_taxi_image.png";
+  static String onboarding = "assets/images/onboarding.png";
+  static String atoForm = "assets/images/ato-form-en-400 1.png";
+
 
 
 
