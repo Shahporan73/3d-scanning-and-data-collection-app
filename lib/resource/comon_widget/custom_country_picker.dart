@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
+import '../utilitis/common_style.dart';
+
 class CustomCountryPicker extends StatefulWidget {
   final String titleText;
   final String hintText;
@@ -74,13 +76,9 @@ class _CustomCountryPickerState extends State<CustomCountryPicker> {
       children: [
         if (!widget.isLabelHidden!) Text(
           widget.titleText,
-          style: GoogleFonts.urbanist(
-            fontSize: 12,
-            fontWeight: FontWeight.w400,
-            color: Colors.black,
-          ),
+          style: CommonStyle.textStyleMedium(size: 16),
         ),
-        if (!widget.isLabelHidden!) const SizedBox(height: 5),
+        if (!widget.isLabelHidden!) const SizedBox(height: 0),
         GestureDetector(
           onTap: () {
             FocusScope.of(context).requestFocus(_focusNode);

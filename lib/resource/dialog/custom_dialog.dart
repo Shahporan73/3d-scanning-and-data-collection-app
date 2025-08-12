@@ -41,7 +41,7 @@ class CustomAlertDialog {
                   fontSize: 14,
                 ),
               ),
-              SizedBox(height: 14), // Replacing heightBox14 with SizedBox
+              SizedBox(height: 14),
               Row(
                 children: [
                   Expanded(

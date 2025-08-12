@@ -1,19 +1,16 @@
 class AppImages {
   static String onboarding = "assets/images/onboarding.png";
   static String atoForm = "assets/images/ato-form-en-400 1.png";
+  static String authLogo = "assets/images/6 1 copy.png";
+  static String authBackground = "assets/images/auth_background.png";
+  static String howToUseScanImage = "assets/images/Frame 2147227100.png";
 
 
 
 
   /// =================================icons=============================================
-  static String bronzeIcon = "assets/icons/bronze_icon.png";
-  static String paymentIcon = "assets/icons/payment_icon.png";
-  static String customerAndSupport = "assets/icons/customer_and_support.png";
-  static String security = "assets/icons/security.png";
-  static String promoCode = "assets/icons/promo_code.png";
-  static String logout = "assets/icons/logout.png";
-  static String customMarker = "assets/icons/custom_marker_car.png";
-  static String myCurrentLocationMarker = "assets/icons/my_current_location.png";
+  static String notificationIcon = "assets/icons/notification.png";
+  static String backIcon = "assets/icons/back-icon.png";
 
 
 

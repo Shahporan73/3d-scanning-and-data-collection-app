@@ -1,3 +1,4 @@
+import 'package:data_collection_app/app/modules/authentication/views/signup_view.dart';
 import 'package:data_collection_app/resource/app_colors/App_Colors.dart';
 import 'package:data_collection_app/resource/app_images/app_images.dart';
 import 'package:data_collection_app/resource/comon_widget/custom_text.dart';
@@ -72,11 +73,9 @@ class OnboardingView extends GetView<OnboardingController> {
                     textStyle: const TextStyle(color: AppColors.secondaryColor, fontSize: 16, fontWeight: FontWeight.bold),
                     onSubmit: () async {
                       controller.isLoading.value = true;
-                      // লোডিং সময় দেখানোর জন্য
                       await Future.delayed(const Duration(seconds: 1, milliseconds: 500));
                       controller.isLoading.value = false;
-                      // হোমে পাঠানো
-                      Get.offAllNamed('/home');
+                      Get.to(()=>SignupView());
                     },
                   ),
                 ],

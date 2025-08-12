@@ -4,12 +4,18 @@ import '../modules/authentication/bindings/authentication_binding.dart';
 import '../modules/authentication/views/authentication_view.dart';
 import '../modules/camera/bindings/camera_binding.dart';
 import '../modules/camera/views/camera_view.dart';
+import '../modules/dashboard/bindings/dashboard_binding.dart';
+import '../modules/dashboard/views/dashboard_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/how_to_use_scan/bindings/how_to_use_scan_binding.dart';
 import '../modules/how_to_use_scan/views/how_to_use_scan_view.dart';
+import '../modules/my_scan/bindings/my_scan_binding.dart';
+import '../modules/my_scan/views/my_scan_view.dart';
 import '../modules/my_scan_details/bindings/my_scan_details_binding.dart';
 import '../modules/my_scan_details/views/my_scan_details_view.dart';
+import '../modules/notification/bindings/notification_binding.dart';
+import '../modules/notification/views/notification_view.dart';
 import '../modules/onboarding/bindings/onboarding_binding.dart';
 import '../modules/onboarding/views/onboarding_view.dart';
 import '../modules/privacy_policy/bindings/privacy_policy_binding.dart';
@@ -78,6 +84,21 @@ class AppPages {
       name: _Paths.TERMS_AND_CONDITION,
       page: () => const TermsAndConditionView(),
       binding: TermsAndConditionBinding(),
+    ),
+    GetPage(
+      name: _Paths.DASHBOARD,
+      page: () => const Dashboard(),
+      binding: DashboardBinding(),
+    ),
+    GetPage(
+      name: _Paths.MY_SCAN,
+      page: () => const MyScanView(),
+      binding: MyScanBinding(),
+    ),
+    GetPage(
+      name: _Paths.NOTIFICATION,
+      page: () => const NotificationView(),
+      binding: NotificationBinding(),
     ),
   ];
 }

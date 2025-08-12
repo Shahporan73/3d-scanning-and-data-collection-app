@@ -13,6 +13,9 @@ abstract class Routes {
   static const SETTING = _Paths.SETTING;
   static const PRIVACY_POLICY = _Paths.PRIVACY_POLICY;
   static const TERMS_AND_CONDITION = _Paths.TERMS_AND_CONDITION;
+  static const DASHBOARD = _Paths.DASHBOARD;
+  static const MY_SCAN = _Paths.MY_SCAN;
+  static const NOTIFICATION = _Paths.NOTIFICATION;
 }
 
 abstract class _Paths {
@@ -27,4 +30,7 @@ abstract class _Paths {
   static const SETTING = '/setting';
   static const PRIVACY_POLICY = '/privacy-policy';
   static const TERMS_AND_CONDITION = '/terms-and-condition';
+  static const DASHBOARD = '/dashboard';
+  static const MY_SCAN = '/my-scan';
+  static const NOTIFICATION = '/notification';
 }
