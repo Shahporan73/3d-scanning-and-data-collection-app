@@ -1,6 +1,8 @@
 import 'package:data_collection_app/app/modules/my_scan/views/my_scan_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../camera/views/camera_view.dart';
+import '../../camera/views/take_image_by_camera_view.dart';
 import '../../home/views/home_view.dart';
 import '../../profile/views/profile_view.dart';
 
@@ -60,7 +62,8 @@ class _DashboardState extends State<Dashboard> {
           left: MediaQuery.of(context).size.width / 2 - 28,
           child: GestureDetector(
             onTap: () {
-              Get.snackbar("Plus Button", "You tapped the add button!");
+              // Get.snackbar("Plus Button", "You tapped the add button!");
+              Get.to(() => const TakeImageByCameraView());
             },
             child: Container(
               width: 56,

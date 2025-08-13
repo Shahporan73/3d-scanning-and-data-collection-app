@@ -67,7 +67,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.MY_SCAN_DETAILS,
-      page: () => const MyScanDetailsView(),
+      page: () => MyScanDetailsView(),
       binding: MyScanDetailsBinding(),
     ),
     GetPage(

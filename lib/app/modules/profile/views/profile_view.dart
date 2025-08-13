@@ -5,9 +5,13 @@ import 'package:data_collection_app/app/modules/terms_and_condition/views/terms_
 import 'package:data_collection_app/resource/dialog/custom_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../../resource/comon_widget/custom_network_image.dart';
+import '../../../../resource/utilitis/common_style.dart';
 import '../../setting/views/setting_view.dart' show SettingView;
 import '../controllers/profile_controller.dart';
 import '../widget/profile_menu_item.dart';
+import 'contact_support_view.dart';
+import 'edit_profile_view.dart';
 
 class ProfileView extends GetView<ProfileController> {
   const ProfileView({super.key});
@@ -19,30 +23,36 @@ class ProfileView extends GetView<ProfileController> {
       body: Column(
         children: [
           const CommonAppBar(title: 'My Profile'),
-          const SizedBox(height: 16),
 
           // Profile Image
-          const CircleAvatar(
-            radius: 45,
-            backgroundImage: AssetImage("assets/images/face.png"),
-            backgroundColor: Colors.grey,
+          CustomNetworkImage(
+            imageUrl: 'https://www.lifewire.com/thmb/0Ny2hOkKIil3c9NYE52avwdaztA=/1500x0/filters:'
+                'no_upscale():max_bytes(150000):strip_icc()/GettyImages-172997570-9d13dc5ca22840c183cb0e9e943a58e1.jpg',
+            height: Get.height / 6,
+            width: Get.width / 3,
+            boxShape: BoxShape.circle,
           ),
           const SizedBox(height: 12),
 
           // Name
-          const Text(
+          Text(
             "Jamal Rakhosh",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+            style: CommonStyle.textStyleMedium(size: 18),
           ),
-          const SizedBox(height: 20),
 
+          const SizedBox(height: 20),
           // Menu List
           Expanded(
             child: ListView(
+              shrinkWrap: true,
+              padding: EdgeInsets.zero,
               children: [
                 ProfileMenuItem(
                   icon: Icons.person_outline,
                   title: "Edit Profile",
+                  onTap: () {
+                    Get.to(() => const EditProfileView());
+                  },
                 ),
                 ProfileMenuItem(
                     icon: Icons.help_outline,
@@ -54,6 +64,9 @@ class ProfileView extends GetView<ProfileController> {
                 ProfileMenuItem(
                   icon: Icons.call_outlined,
                   title: "Contact Support",
+                  onTap: () {
+                    Get.to(() => const ContactSupportView());
+                  },
                 ),
                 ProfileMenuItem(
                   icon: Icons.settings_outlined,

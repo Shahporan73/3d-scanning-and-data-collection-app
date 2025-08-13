@@ -1,7 +1,9 @@
+import 'package:data_collection_app/app/modules/setting/views/change_password_view.dart';
 import 'package:data_collection_app/resource/app_colors/App_Colors.dart';
 import 'package:data_collection_app/resource/dialog/custom_dialog.dart';
 import 'package:data_collection_app/resource/utilitis/common_style.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../profile/widget/common_app_bar.dart';
 import '../../profile/widget/profile_menu_item.dart';
@@ -30,6 +32,9 @@ class _SettingViewState extends State<SettingView> {
                 ProfileMenuItem(
                   icon: Icons.lock,
                   title: "Change password",
+                  onTap: () {
+                    Get.to(()=>ChangePasswordView());
+                  },
                 ),
                 ProfileMenuItem(
                   icon: Icons.language,

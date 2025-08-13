@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../app_colors/App_Colors.dart';
 import '../comon_widget/custom_button.dart';
 import '../comon_widget/custom_loader.dart';
+import 'dialog_widget/show_full_screen_image_widget.dart';
 
 class CustomAlertDialog {
   Future<void> customAlert({
@@ -206,21 +207,21 @@ class CustomAlertDialog {
   }
 
 
-  // void showFullScreenImageDialog({
-  //   required BuildContext context,
-  //   String? imageUrl,
-  //   File? imageFile,
-  // }) {
-  //   if (imageUrl == null && imageFile == null) return;
-  //
-  //   showDialog(
-  //     context: context,
-  //     builder: (BuildContext context) {
-  //       return ShowFullScreenImageDialog(
-  //         imageUrl: imageUrl,
-  //         imageFile: imageFile,
-  //       );
-  //     },
-  //   );
-  // }
+  void showFullScreenImageDialog({
+    required BuildContext context,
+    String? imageUrl,
+    File? imageFile,
+  }) {
+    if (imageUrl == null && imageFile == null) return;
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return ShowFullScreenImageDialog(
+          imageUrl: imageUrl,
+          imageFile: imageFile,
+        );
+      },
+    );
+  }
 }

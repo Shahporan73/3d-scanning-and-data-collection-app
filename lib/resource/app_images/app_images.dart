@@ -10,7 +10,7 @@ class AppImages {
 
   /// =================================icons=============================================
   static String notificationIcon = "assets/icons/notification.png";
-  static String backIcon = "assets/icons/back-icon.png";
+  static String backIcon = "assets/icons/arrow-circle-left.png";
 
 
 

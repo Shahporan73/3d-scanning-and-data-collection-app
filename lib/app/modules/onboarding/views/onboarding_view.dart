@@ -1,3 +1,4 @@
+import 'package:data_collection_app/app/modules/authentication/views/signin_view.dart';
 import 'package:data_collection_app/app/modules/authentication/views/signup_view.dart';
 import 'package:data_collection_app/resource/app_colors/App_Colors.dart';
 import 'package:data_collection_app/resource/app_images/app_images.dart';
@@ -75,7 +76,7 @@ class OnboardingView extends GetView<OnboardingController> {
                       controller.isLoading.value = true;
                       await Future.delayed(const Duration(seconds: 1, milliseconds: 500));
                       controller.isLoading.value = false;
-                      Get.to(()=>SignupView());
+                      Get.to(()=>SigninView());
                     },
                   ),
                 ],

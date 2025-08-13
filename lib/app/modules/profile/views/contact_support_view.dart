@@ -1,22 +1,23 @@
+import 'package:data_collection_app/resource/comon_widget/custom_button.dart';
+import 'package:data_collection_app/resource/comon_widget/custom_text_field.dart';
+import 'package:data_collection_app/resource/utilitis/common_style.dart';
+import 'package:data_collection_app/resource/utilitis/custom_toast.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import '../../../../resource/comon_widget/custom_button.dart';
-import '../../../../resource/comon_widget/custom_text_field.dart';
-import '../../../../resource/utilitis/common_style.dart';
-import '../../../../resource/utilitis/custom_toast.dart';
-import '../../profile/widget/common_app_bar.dart';
+import '../widget/common_app_bar.dart';
 
-class ChangePasswordView extends GetView {
-  const ChangePasswordView({super.key});
+class ContactSupportView extends GetView {
+  const ContactSupportView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          const CommonAppBar(title: 'Change Password'),
+          const CommonAppBar(title: 'Contact Support'),
+          
           Expanded(
             child: SingleChildScrollView(
               child: Padding(
@@ -25,40 +26,45 @@ class ChangePasswordView extends GetView {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Old password",
+                      "Name",
                       style: CommonStyle.textStyleMedium(size: 16),
                     ),
                     const SizedBox(height: 10),
-                    CustomTextField(hint: 'Enter your old password', obscureText: true,),
-
+                    CustomTextField(hint: 'Enter your name',),
+              
                     SizedBox(height: 20,),
                     Text(
-                      "New password",
+                      "Email Address",
                       style: CommonStyle.textStyleMedium(size: 16),
                     ),
                     const SizedBox(height: 10),
-                    CustomTextField(hint: 'Enter your new password', obscureText: true,),
-
+                    CustomTextField(hint: 'Enter your email address',),
+              
                     SizedBox(height: 20,),
                     Text(
-                      "Confirm password",
+                      "Message",
                       style: CommonStyle.textStyleMedium(size: 16),
                     ),
                     const SizedBox(height: 10),
-                    CustomTextField(hint: 'Enter your confirm password', obscureText: true,),
-
+                    CustomTextField(
+                      hint: 'Enter your message',
+                      maxLine: 6,
+                      height: Get.height / 5,
+                      vertical_padding: 16,
+                    ),
+              
                     SizedBox(height: 20,),
                     CustomButton(
-                        title: 'Change Password',
+                        title: 'Submit',
                         onTap: (){
-                          CustomToast.showToast(message: 'Change password successfully');
+                          CustomToast.showToast(message: 'Submitted Successfully');
                           Get.back();
                         }
                     ),
-
+              
                     SizedBox(height: 20,),
-
-
+              
+              
                   ],
                 ),
               ),
