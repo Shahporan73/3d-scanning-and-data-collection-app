@@ -1,5 +1,6 @@
 // views/take_image_by_camera_view.dart
 import 'package:data_collection_app/app/modules/camera/model/picture_side.dart';
+import 'package:data_collection_app/resource/app_colors/App_Colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/camera_controller.dart';
@@ -27,8 +28,7 @@ class TakeImageByCameraView extends GetView {
                     children: [
                       CircularProgressIndicator(color: Colors.white),
                       SizedBox(height: 16),
-                      Text(
-                        'Initializing camera...',
+                      Text('Initializing camera...',
                         style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
                     ],
@@ -45,10 +45,10 @@ class TakeImageByCameraView extends GetView {
           ),
 
           // Top Instruction Banner
-        /*  Positioned(
-            top: MediaQuery.of(context).padding.top + 20,
-            left: 20,
-            right: 20,
+          Positioned(
+            top: MediaQuery.of(context).padding.top,
+            left: 5,
+            right: 5,
             child: Obx(() => Container(
               padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
@@ -65,7 +65,7 @@ class TakeImageByCameraView extends GetView {
                     'Capture ${cameraController.currentSide.value.displayName.toUpperCase()} VIEW',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 24,
+                      fontSize: 12,
                       fontWeight: FontWeight.bold,
                       letterSpacing: 1.2,
                     ),
@@ -76,13 +76,13 @@ class TakeImageByCameraView extends GetView {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.white70,
-                      fontSize: 16,
+                      fontSize: 10,
                     ),
                   ),
                 ],
               ),
             )),
-          ),*/
+          ),
 
           // Progress Indicator at Top Right
           Positioned(
@@ -218,7 +218,7 @@ class TakeImageByCameraView extends GetView {
   Color _getSideColor(PictureSide side) {
     switch (side) {
       case PictureSide.front:
-        return Colors.blue;
+        return AppColors.mainColor;
       case PictureSide.left:
         return Colors.orange;
       case PictureSide.right:

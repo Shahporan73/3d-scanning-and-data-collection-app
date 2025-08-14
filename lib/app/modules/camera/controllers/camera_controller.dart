@@ -1,6 +1,7 @@
 // controllers/camera_controller.dart
 import 'dart:io';
 import 'package:camera/camera.dart' as cam;
+import 'package:data_collection_app/app/modules/dashboard/views/dashboard_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -10,6 +11,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 import '../model/captured_image.dart';
 import '../model/picture_side.dart';
+import '../views/input_info_view.dart';
 
 class CameraController extends GetxController {
   cam.CameraController? cameraController;
@@ -201,6 +203,8 @@ class CameraController extends GetxController {
       // Clear captured images after successful submission
       _clearAllImages();
 
+      Get.to(()=> InputInfoView());
+
     } catch (e) {
       showCustomToast('Error submitting images: ${e.toString()}');
     }
@@ -224,9 +228,9 @@ class CameraController extends GetxController {
   void showCustomToast(String message) {
     Fluttertoast.showToast(
       msg: message,
-      toastLength: Toast.LENGTH_LONG,
-      gravity: ToastGravity.CENTER,
-      timeInSecForIosWeb: 3,
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.TOP,
+      timeInSecForIosWeb: 1,
       backgroundColor: Colors.black87,
       textColor: Colors.white,
       fontSize: 16.0,

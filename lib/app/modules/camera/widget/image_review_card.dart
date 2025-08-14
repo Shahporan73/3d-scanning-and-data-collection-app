@@ -1,5 +1,7 @@
 // widgets/image_review_card.dart
 import 'package:data_collection_app/app/modules/camera/model/picture_side.dart';
+import 'package:data_collection_app/resource/dialog/custom_dialog.dart';
+import 'package:data_collection_app/resource/utilitis/common_style.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'dart:io';
@@ -37,31 +39,34 @@ class ImageReviewCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
-            child: ClipRRect(
-              borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
-              child: Image.file(
-                File(capturedImage.path),
-                fit: BoxFit.cover,
-                width: double.maxFinite,
-                height: double.maxFinite,
+            child: InkWell(
+              onTap: () {
+                CustomAlertDialog().showFullScreenImageDialog(
+                    context: context,
+                  imageFile: File(capturedImage.path),
+                );
+              },
+              child: ClipRRect(
+                borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
+                child: Image.file(
+                  File(capturedImage.path),
+                  fit: BoxFit.cover,
+                  width: double.maxFinite,
+                  height: double.maxFinite,
+                ),
               ),
             ),
           ),
 
           Padding(
             padding: EdgeInsets.all(8),
-            child: Column(
+            child: Row(
               children: [
                 Text(
                   capturedImage.side.displayName,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  ),
+                  style: CommonStyle.textStyleSmall(fontWeight: FontWeight.bold, size: 14),
                 ),
-
-                SizedBox(height: 8),
-
+                Spacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -69,6 +74,7 @@ class ImageReviewCard extends StatelessWidget {
                       onTap: onRetake,
                       child: Icon(Icons.refresh, color: Colors.blue),
                     ),
+                    const SizedBox(width: 8),
                     InkWell(
                       onTap: onDelete,
                       child: Icon(Icons.delete, color: Colors.red),

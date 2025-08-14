@@ -56,6 +56,7 @@ class _FaceScanningOverlayState extends State<FaceScanningOverlay>
 
   @override
   Widget build(BuildContext context) {
+    // Use Get.find to get the existing controller
     final CameraController cameraController = Get.find<CameraController>();
 
     return Stack(
@@ -73,8 +74,8 @@ class _FaceScanningOverlayState extends State<FaceScanningOverlay>
               return Transform.scale(
                 scale: _pulseAnimation.value,
                 child: Container(
-                  width: 280,
-                  height: 350,
+                  width: Get.width / 1.2,
+                  height: Get.height / 2,
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.transparent,
@@ -125,7 +126,7 @@ class _FaceScanningOverlayState extends State<FaceScanningOverlay>
           ),
         ),
 
-        // Scanning status text
+       /* // Scanning status text
         Positioned(
           bottom: 200,
           left: 0,
@@ -152,7 +153,7 @@ class _FaceScanningOverlayState extends State<FaceScanningOverlay>
               ),
             ],
           )),
-        ),
+        ),*/
       ],
     );
   }

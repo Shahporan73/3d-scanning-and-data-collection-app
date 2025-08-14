@@ -59,8 +59,8 @@ class CustomAlertDialog {
                         title: NegativebuttonText,
                         paddingVertical: 10,
                         buttonColor: Colors.transparent,
-                        titleColor: AppColors.darkPink,
-                        border: Border.all(color: AppColors.darkPink),
+                        titleColor: AppColors.mainColor,
+                        border: Border.all(color: AppColors.mainColor),
                         fontSize: 14,
                         onTap: onNegativeButtonPressed
                     ),

@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:camera/camera.dart' as camera;
+import 'package:google_fonts/google_fonts.dart';
 import '../controllers/camera_controller.dart';
 
 class CameraPreviewWidget extends StatelessWidget {
@@ -38,8 +39,8 @@ class CameraPreviewWidget extends StatelessWidget {
                 ),
                 child: Center(
                   child: Container(
-                    width: 200,
-                    height: 250,
+                    width: Get.width / 1.5,
+                    height: Get.height / 2.5,
                     decoration: BoxDecoration(
                       border: Border.all(
                         color: Colors.green.withOpacity(0.7),
@@ -51,9 +52,9 @@ class CameraPreviewWidget extends StatelessWidget {
                       child: Text(
                         'Position head\nwithin frame',
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           color: Colors.white,
-                          fontSize: 16,
+                          fontSize: 14,
                           fontWeight: FontWeight.bold,
                           shadows: [
                             Shadow(

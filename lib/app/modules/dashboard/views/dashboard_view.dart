@@ -63,7 +63,7 @@ class _DashboardState extends State<Dashboard> {
           child: GestureDetector(
             onTap: () {
               // Get.snackbar("Plus Button", "You tapped the add button!");
-              Get.to(() => const TakeImageByCameraView());
+              Get.to(() => const CameraView());
             },
             child: Container(
               width: 56,

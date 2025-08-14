@@ -37,7 +37,14 @@ class CommonAppBar extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: InkWell(
                 onTap: () => Navigator.pop(context),
-                child: Image.asset(AppImages.backIcon, width: Get.width / 12),
+                child: Container(
+                  padding: EdgeInsets.all(5),
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Icon(Icons.arrow_back, color: Colors.white, size: 22,),
+                ),
               ),
             ),
           Text(

@@ -1,3 +1,4 @@
+import 'package:data_collection_app/app/modules/camera/views/camera_view.dart';
 import 'package:data_collection_app/app/modules/dashboard/views/dashboard_view.dart';
 import 'package:data_collection_app/app/modules/how_to_use_scan/widget/custom_header.dart';
 import 'package:data_collection_app/resource/app_colors/App_Colors.dart';
@@ -95,7 +96,8 @@ class HowToUseScanView extends GetView<HowToUseScanController> {
                         iconColor: Colors.red,
                         step: "Step 5: Warning",
                         description:
-                        "The app only accepts 3D model files with these extensions: .obj, .ply, .glb, .stl.\nFile size limit is set to 300 MB max — anything larger is rejected.",
+                        "The app only accepts 3D model files with these extensions: .obj, .ply, .glb, .stl.\nFile size "
+                            "limit is set to 300 MB max — anything larger is rejected.",
                         bgColor: const Color(0xFFFDE5E5),
                       ),
 
@@ -106,7 +108,9 @@ class HowToUseScanView extends GetView<HowToUseScanController> {
                         children: [
                           Expanded(
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Get.to(()=> CameraView());
+                              },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: AppColors.mainColor,
                                 shape: RoundedRectangleBorder(
